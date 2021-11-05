@@ -37,9 +37,6 @@ class DogCardAdapter(private val context: Context?,private val layout: Int): Rec
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DogCardViewHolder {
-        // TODO: Use a conditional to determine the layout type and set it accordingly.
-        //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
-        //  the vertical/horizontal list item should be used.
         val layoutType = when(layout){
             Layout.HORIZONTAL -> LayoutInflater.from(parent.context).inflate(R.layout.vertical_horizontal_list_item,parent,false)
             Layout.VERTICAL -> LayoutInflater.from(parent.context).inflate(R.layout.vertical_horizontal_list_item,parent,false)
@@ -53,20 +50,12 @@ class DogCardAdapter(private val context: Context?,private val layout: Int): Rec
     override fun getItemCount(): Int = dogInfo.size
 
     override fun onBindViewHolder(holder: DogCardAdapter.DogCardViewHolder, position: Int) {
-        // TODO: Get the data at the current position
         val itme = dogInfo[position]
-        // TODO: Set the image resource for the current dog
         holder.imageView.setImageResource(itme.imageResourceId)
-        // TODO: Set the text for the current dog's name
         holder.textName.text= itme.name
-        // TODO: Set the text for the current dog's age
         holder.textAge.text="age : ${itme.age}"
         val resources = context?.resources
         holder.textHobb.text = resources?.getString(R.string.dog_hobbies, itme.hobbies)
-        // TODO: Set the text for the current dog's hobbies by passing the hobbies to the
-        //  R.string.dog_hobbies string constant.
-        //  Passing an argument to the string resource looks like:
-        //  resources?.getString(R.string.dog_hobbies, dog.hobbies)
 
     }
 }
