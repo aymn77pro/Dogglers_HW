@@ -1,0 +1,7 @@
+#Fri Nov 05 18:20:36 GMT+03:00 2021
+base.1=C\:\\Users\\aymn7\\Desktop\\android-basics-kotlin-dogglers-app-main\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+path.1=classes.dex
+base.0=C\:\\Users\\aymn7\\Desktop\\android-basics-kotlin-dogglers-app-main\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
